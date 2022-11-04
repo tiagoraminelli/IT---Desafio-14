@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --letra:'Roboto', sans-serif;
+    --letra_secundaria:'Square Peg', cursive;
+    --colorfondo:#fa9191;
+    --colorletra:#fff;
+    --color_principal:#fff;
+    --letraprincipal:'Quicksand', sans-serif;
+    --color_elemento:rgba(0, 0, 0, 0.4);
+    --color_varios:#000;
+    --color_accion: #eb6383;
+    --colorfinal:#FAD4D4;
+    --width:100%;
+    --height:100%;
+}
+body{
+    font-family:var(--letraprincipal);
+    font-size: 20px;
+    min-height: 100vh;
+    background: var(--color_principal);
+
+}
+header{
+    width: var(--width);
+    height: 800px;
+    background-image: url("/desafio.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.placa{
+    width: var(--width);
+    height: 100px;
+    position: absolute;
+    top:100px;
+    background-color: var(--color_elemento);
+    text-align: center;
+    padding-top: 20px;
+}
+h1{
+    font-size: 45px;
+    color: var(--color_principal);
+    margin: 25px o auto;
+  
+}
+
+.material-symbols-outlined {
+    font-size: 30px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.medio{
+    width: var(--width);
+    height: 800px;
+    background-image: url("/fondo.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.card{
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+.card .face{
+    position: absolute;
+    width: var(--width);
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+    border-radius: 10px;
+
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px var(--color_varios);
+}
+
+.card .front img{
+    position: absolute;
+    width: var(--width);
+    height: var(--height);
+    object-fit: cover;
+}
+
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: var(--colorfondo);
+    color: var(--colorletra);
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0.5px 10px var(--colorfondo);
+}
+
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .back .p{
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+.texto{
+    width: var(--width);
+    height: 100px;
+    position: relative;
+    top:100px;
+    background-color: var(--color_elemento);
+    }
+.otro{
+    font-size: 42px;
+    color: var(--colorletra);
+    margin: 40px auto;
+    text-align: center;
+    padding-top: 20px;
+    text-shadow: 5px 5px 20px var(--color_varios);
+}
+nav{
+    width: var(--width);
+    background-color:  var(--colorfondo);
+    color: var(--colorletra);
+    top: 0;
+    position: fixed;
+}
+nav ul{
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+    padding: 5px;
+}
+nav ul li a{
+    display: block;
+    padding: 15px;
+    color: var(--colorletra);
+    text-decoration: none;
+}
+nav ul li:hover{
+    background: var(--color_accion);
+}
+section{
+    padding-top: 15px;
+    width: 95%;
+    margin: auto;
+    text-align: justify;
+    margin-top: 60px;
+}
+p{
+    margin: 16px 0;
+    line-height: 150%;
+}
+.formulario{
+    position: relative;
+    bottom: 30px;
+    font-size: 28px;    
+    text-align: center;
+    background-color:var(--color_principal);
+    border-radius: 50px;
+    padding-top: 10px;
+    font-family: var(--letra_secundaria);
+
+}
+footer{
+    width: var(--width);
+    height: 50px;
+    background-color: var(--colorfinal);
+    color: var(--color_varios);
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+.formulario{
+    position: relative;
+    bottom: 30px;
+    font-size: 28px;    
+    text-align: center;
+    background-color:var(--color_principal);
+    border-radius: 50px;
+    padding-top: 10px;
+    font-family: var(--letra_secundaria)
+}
